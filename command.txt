@@ -1,0 +1,13 @@
+setx JAVA_HOME "C:\Android\openjdk"
+setx ANDROID_HOME "C:\Android\sdk"
+setx ANDROID_SDK_ROOT "C:\Android\sdk"
+setx path "%path%;"C:\Android\openjdk\bin;C:\Android\sdk\cmdline-tools\tools\bin;C:\Android\sdk\platform-tools;C:\Android\gradle\bin;C:\Android\scrcpy;C:\Android\flutter\bin"
+
+java -version
+sdkmanager
+sdkmanager --sdk_root=%ANDROID_HOME% "platform-tools"
+sdkmanager --sdk_root=%ANDROID_HOME% "system-images;android-29;default;x86_64"
+sdkmanager --sdk_root=%ANDROID_HOME% "build-tools;29.0.1"
+sdkmanager --sdk_root=%ANDROID_HOME% "platforms;android-29"
+sdkmanager --licenses
+flutter doctor
